@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buy Items</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles_cart.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/v4-shims.css">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="store.js" async></script>
+
+  <!-- Step 1 -->
+  <!-- <script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script> -->
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+
+
+</head>
+<body   style="background-image: url('images/bg-img.jpg');"  onload="onReload()" oncontextmenu="return false;" onkeydown="return false;" onmousedown="return false;">
+
+<h2 style="text-align:center">Starter Pricing Bundle  
+
+  <div id="ex4" >
+    <span  class="p1 fa-stack fa-2x has-badge" >
+      <i class="p3 fa fa-shopping-cart fa-stack-1x xfa-inverse" data-count="4b" data-toggle="modal" data-target="#myModal"></i>
+    </span>
+  </div>
+
+<!-- 
+  <span  id="ex4" class="p1 fa-stack fa-2x has-badge" data-count="4"></span>
+<i class="fas fa-shopping-cart" data-count="4b"  data-toggle="modal" data-target="#myModal"></i> -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Cart Items</h4>
+              </div>
+              <div class="cart-row">
+                <span class="cart-item cart-header cart-column">IMG</span>
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">₹ 0</span>
+            </div>
+            <!-- <button class="btn btn-primary btn-purchase"  type="button">Do Not Touch</button> -->
+            <button  id="rzp-button1">Pay</button>
+            
+
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</h2>
+
+
+
+
+
+
+
+<div class="columns">
+  <ul class="price">
+    <li class="shop-item-title header">Basic</li>
+    <li class="shop-item-price grey" id="00">₹ 999</li>
+    <li>10GB Storage</li>
+    <li>10 Emails</li>
+    <li>10 Domains</li>  
+    <li>1GB Bandwidth</li>
+    <li><img class="shop-item-image" src="Images/Album 1.png"></li>
+    <li class="grey"> <button class="btn btn-primary shop-item-button">ADD TO CART</button></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="shop-item-title header" style="background-color:#4CAF50">Pro</li>
+    <li class="shop-item-price grey" id="01">₹ 2499</li>
+    <li>25GB Storage</li>
+    <li>25 Emails</li>
+    <li>25 Domains</li>
+    <li>2GB Bandwidth</li>
+    <li><img class="shop-item-image" src="Images/Album 2.png"></li>
+    <li class="grey"> <button class="btn btn-primary shop-item-button">ADD TO CART</button></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="shop-item-title header" style="background-color:#440857">Premium</li>
+    <li class="shop-item-price grey" id="02">₹ 4999</li>
+    <li>50GB Storage</li>
+    <li>50 Emails</li>
+    <li>50 Domains</li>
+    <li>5GB Bandwidth</li>
+    <li><img class="shop-item-image" src="Images/Album 3.png"></li>
+    <li class="grey"> <button class="btn btn-primary shop-item-button">ADD TO CART</button></li>
+  </ul>
+</div>
+
+<!-- <div class="columns container">
+<section >
+  <div class="cart-row">
+      <span class="cart-item cart-header cart-column">ITEM</span>
+      <span class="cart-price cart-header cart-column">PRICE</span>
+      <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+  </div>
+  <div class="cart-items">
+  </div>
+  <div class="cart-total">
+      <strong class="cart-total-title">Total</strong>
+      <span class="cart-total-price">₹ 0</span>
+  </div>
+  <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+</section>
+</div> -->
+
+
+
+<body>  
+	<form method="post">
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
+</body>
+
+
+
+</body>
+</html>
