@@ -295,9 +295,9 @@ var options = {
 
     },
     "prefill": {
-        "name": "Neetan Sharma",
-        "email": "testautodeployment@gmail.com",
-        "contact": "7042476555"
+        "name": "abc",
+        "email": "xyz@email.com",
+        "contact": "123456789"
     },
     "notes": {
         "address": "Razorpay Corporate Office"
